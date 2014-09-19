@@ -10,4 +10,6 @@
 
 @interface PISKMyScene : SKScene
 
+-(void)updatePoints;
+
 @end

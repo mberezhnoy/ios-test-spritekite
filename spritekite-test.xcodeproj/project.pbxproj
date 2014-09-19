@@ -24,6 +24,10 @@
 		62B9C61819C88B8F0017F94F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62B9C5F319C88B8F0017F94F /* UIKit.framework */; };
 		62B9C62019C88B8F0017F94F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 62B9C61E19C88B8F0017F94F /* InfoPlist.strings */; };
 		62B9C62219C88B8F0017F94F /* spritekite_testTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B9C62119C88B8F0017F94F /* spritekite_testTests.m */; };
+		62B9C62D19C9B10C0017F94F /* PISKPointNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B9C62C19C9B10C0017F94F /* PISKPointNode.m */; };
+		62B9C63019C9F8C00017F94F /* PISKDragebleNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B9C62F19C9F8C00017F94F /* PISKDragebleNode.m */; };
+		62B9C63219CAA3290017F94F /* circle_arrows.png in Resources */ = {isa = PBXBuildFile; fileRef = 62B9C63119CAA3290017F94F /* circle_arrows.png */; };
+		62B9C63419CABD2E0017F94F /* round.png in Resources */ = {isa = PBXBuildFile; fileRef = 62B9C63319CABD2E0017F94F /* round.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +64,12 @@
 		62B9C61D19C88B8F0017F94F /* spritekite-testTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "spritekite-testTests-Info.plist"; sourceTree = "<group>"; };
 		62B9C61F19C88B8F0017F94F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		62B9C62119C88B8F0017F94F /* spritekite_testTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = spritekite_testTests.m; sourceTree = "<group>"; };
+		62B9C62B19C9B10C0017F94F /* PISKPointNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PISKPointNode.h; sourceTree = "<group>"; };
+		62B9C62C19C9B10C0017F94F /* PISKPointNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PISKPointNode.m; sourceTree = "<group>"; };
+		62B9C62E19C9F8C00017F94F /* PISKDragebleNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PISKDragebleNode.h; sourceTree = "<group>"; };
+		62B9C62F19C9F8C00017F94F /* PISKDragebleNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PISKDragebleNode.m; sourceTree = "<group>"; };
+		62B9C63119CAA3290017F94F /* circle_arrows.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle_arrows.png; sourceTree = "<group>"; };
+		62B9C63319CABD2E0017F94F /* round.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = round.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +131,8 @@
 		62B9C5F719C88B8F0017F94F /* spritekite-test */ = {
 			isa = PBXGroup;
 			children = (
+				62B9C63319CABD2E0017F94F /* round.png */,
+				62B9C63119CAA3290017F94F /* circle_arrows.png */,
 				62B9C60019C88B8F0017F94F /* PISKAppDelegate.h */,
 				62B9C60119C88B8F0017F94F /* PISKAppDelegate.m */,
 				62B9C60319C88B8F0017F94F /* Main.storyboard */,
@@ -128,9 +140,13 @@
 				62B9C60719C88B8F0017F94F /* PISKViewController.m */,
 				62B9C60919C88B8F0017F94F /* PISKMyScene.h */,
 				62B9C60A19C88B8F0017F94F /* PISKMyScene.m */,
+				62B9C62B19C9B10C0017F94F /* PISKPointNode.h */,
+				62B9C62C19C9B10C0017F94F /* PISKPointNode.m */,
 				62B9C60C19C88B8F0017F94F /* Spaceship.png */,
 				62B9C60E19C88B8F0017F94F /* Images.xcassets */,
 				62B9C5F819C88B8F0017F94F /* Supporting Files */,
+				62B9C62E19C9F8C00017F94F /* PISKDragebleNode.h */,
+				62B9C62F19C9F8C00017F94F /* PISKDragebleNode.m */,
 			);
 			path = "spritekite-test";
 			sourceTree = "<group>";
@@ -241,8 +257,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62B9C63419CABD2E0017F94F /* round.png in Resources */,
 				62B9C5FC19C88B8F0017F94F /* InfoPlist.strings in Resources */,
 				62B9C60F19C88B8F0017F94F /* Images.xcassets in Resources */,
+				62B9C63219CAA3290017F94F /* circle_arrows.png in Resources */,
 				62B9C60D19C88B8F0017F94F /* Spaceship.png in Resources */,
 				62B9C60519C88B8F0017F94F /* Main.storyboard in Resources */,
 			);
@@ -265,7 +283,9 @@
 			files = (
 				62B9C5FE19C88B8F0017F94F /* main.m in Sources */,
 				62B9C60219C88B8F0017F94F /* PISKAppDelegate.m in Sources */,
+				62B9C63019C9F8C00017F94F /* PISKDragebleNode.m in Sources */,
 				62B9C60819C88B8F0017F94F /* PISKViewController.m in Sources */,
+				62B9C62D19C9B10C0017F94F /* PISKPointNode.m in Sources */,
 				62B9C60B19C88B8F0017F94F /* PISKMyScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,7 +415,6 @@
 				GCC_PREFIX_HEADER = "spritekite-test/spritekite-test-Prefix.pch";
 				INFOPLIST_FILE = "spritekite-test/spritekite-test-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -409,7 +428,6 @@
 				GCC_PREFIX_HEADER = "spritekite-test/spritekite-test-Prefix.pch";
 				INFOPLIST_FILE = "spritekite-test/spritekite-test-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

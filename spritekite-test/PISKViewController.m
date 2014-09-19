@@ -17,9 +17,12 @@
 
     // Configure the view.
     SKView * skView = (SKView *)self.view;
+#if __MY_APP_DEV_FPS==1
     skView.showsFPS = YES;
+#endif
+#if __MY_APP_DEV_NODES==1
     skView.showsNodeCount = YES;
-    
+#endif
     // Create and configure the scene.
     SKScene * scene = [PISKMyScene sceneWithSize:skView.bounds.size];
     scene.scaleMode = SKSceneScaleModeAspectFill;

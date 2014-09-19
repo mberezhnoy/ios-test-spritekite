@@ -14,3 +14,7 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+
+#define __MY_APP_DEV_FPS            1
+#define __MY_APP_DEV_NODES          1
+#define __MY_APP_DEV_DRAGEBLEAREA   0
