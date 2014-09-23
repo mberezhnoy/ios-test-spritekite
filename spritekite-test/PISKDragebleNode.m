@@ -68,6 +68,12 @@
 }
 
 #pragma mark EventListener
+-(BOOL)_containPoint:(CGPoint)p
+{
+    return (_nodeArea.origin.x<=p.x) && (p.x<=_nodeArea.origin.x+_nodeArea.size.width) &&
+              (_nodeArea.origin.y<=p.y) && (p.y<=_nodeArea.origin.y+_nodeArea.size.height);
+}
+
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     if ([_targetObject respondsToSelector:@selector(onSelect)])
@@ -80,15 +86,25 @@
 {
     if (_targetObject==nil) return;
     
-    CGPoint cp = [[touches anyObject] locationInNode:self];
-    CGPoint pp = [[touches anyObject] previousLocationInNode:self];
+    CGPoint cp;
+    CGPoint pp;
     
-    _targetObject.position = CGPointMake(_targetObject.position.x - pp.x + cp.x,
-                                         _targetObject.position.y - pp.y + cp.y);
-
-    if ([_targetObject respondsToSelector:@selector(onMoved)])
+    for (UITouch *touch in touches)
     {
-        [_targetObject onMoved];
+        cp = [touch locationInNode:self];
+        pp = [touch previousLocationInNode:self];
+        if ([self _containPoint:pp] )
+        {
+            _targetObject.position = CGPointMake(_targetObject.position.x - pp.x + cp.x,
+                                                 _targetObject.position.y - pp.y + cp.y);
+            
+            if ([_targetObject respondsToSelector:@selector(onMoved)])
+            {
+                [_targetObject onMoved];
+            }
+
+            return;
+        }
     }
 }
 
